@@ -1,12 +1,11 @@
 * { margin: 0; padding: 0; box-sizing: border-box;
-  
-  /* Color scheme */
-  
+
   --textcolor: #121212;
   --bgcolor: #fff;
   --highlight: #2749c9;
 
 }
+
 
 @media (prefers-color-scheme: dark) {
   * {
@@ -15,6 +14,7 @@
     --highlight: #ffc400;
   }
 }
+
 
 body {
   font-size: 18px;
@@ -27,7 +27,6 @@ body {
   margin: 0 auto;  /* centers the layout */
 }
 
-/* ------- Sections ------- */
 
 section {
   padding: calc(6em + 5vw) 5vw 8vw 5vw;
@@ -40,7 +39,7 @@ section {
   background: var(--bgcolor);
 }
 
-section:target { /* Show section */
+section:target {
   display: block;
 }
 
@@ -48,7 +47,6 @@ section#home { /* Show #home by default */
   display: block;
 }
 
-/* ------- Header ------- */
 
 header {
   padding: 5vw 5vw 0 5vw;
