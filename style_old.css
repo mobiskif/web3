@@ -160,7 +160,7 @@ img, svg, video, audio {
   height: auto;
   fill: currentColor;
 }
-
+  
 code, textarea {
   font-family: ui-monospace, SF Mono, Menlo, Monaco, Andale Mono, monospace;
   font-size: 1em;
@@ -251,7 +251,7 @@ section:target iframe {
 
 /* External links */
 
-a[href*="//"]:after {
+a[href*="//"]:after { 
   font-weight: 300;
   font-size: .85em;
   content: "\2197"; /* top right arrow: ↗ */
@@ -266,7 +266,7 @@ a[href*="//"]:hover:after {
 
 /* File links */
 
-a:before {
+a:before { 
   font-size: .7em;
   margin-right: .4em;
 }
@@ -443,22 +443,22 @@ article time {
 /* ------- Print ------- */
 
 @media print {
-
+  
   nav, .lightbox:target:after { display: none; }
-
+  
   article, figure, img {
     page-break-inside: avoid;
     break-inside: avoid;
   }
-
+  
   /* Inline footnotes */
-
+  
   label + input + small { display: inline; }
   label + input + small:before { content: "["; }
   label + input + small:after { content: "]"; }
-
+  
   /* Slides */
-
+  
   .slides, .slides figure {
     position: relative;
     height: auto;
@@ -473,5 +473,5 @@ article time {
     height: 100vh;
     object-fit: contain;
   }
-
+    
 }
