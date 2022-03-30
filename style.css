@@ -6,7 +6,7 @@ img, svg, video, audio {
 header {
   display: flex;
   position: fixed;
-  width: 98%;
+  width: 95%;
   z-index: 2;
 }
 
