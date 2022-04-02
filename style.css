@@ -9,15 +9,15 @@ header {
   z-index: 2;
 }
 
-section {
-  padding-top: 2em;
-  display: none;
-}
-
 header h1 {
   font-size: 1em;
   flex: 1;
-  margin: 0;
+  margin-top: 0;
+}
+
+section {
+  padding-top: 2em;
+  display: none;
 }
 
 section:target {
