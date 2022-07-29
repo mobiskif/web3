@@ -70,22 +70,23 @@ padding:0;
 line-height: 2em;
 list-style-type: none;
 }
-aside a {
+aside aa {
     color: #444;
 }
 
 section h3 {
 margin-top:0;
 }
-section div {
+section.test div{
     float: left;
     max-width: 20em;
     margin-right: 1em;
     overflow: auto;
     padding: 1em;
     color: #444;
+
 }
-section div a {
+section.test div a {
     padding: .3em;
     border-radius: 1em;
     background-color: #009681;
@@ -96,4 +97,33 @@ section div a {
 
 .submit {
     background-color: #009681;
+}
+
+section.confluence h2, div.aside div.innerCell{
+display:none;
+}
+
+section.confluence * {
+margin:0;
+padding:0;
+}
+section.confluence ul{
+    float: left;
+    max-width: 20em;
+    margin-right: 1em;
+    overflow: auto;
+    color: #444;
+}
+
+section.confluence li {
+    border: 1px solid silver;
+    border-radius: 1em;
+    list-style-type: none;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+section.confluence li a {
+display:inline-block;
+margin-bottom:1em;
 }
