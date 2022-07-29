@@ -1,12 +1,6 @@
 * {
     border: 0px solid silver;
-}
-
-a {
-text-decoration: none;
-}
-a:hover {
-text-decoration:underline;
+    --bgcolor: #009681;
 }
 
 html, body {
@@ -21,7 +15,7 @@ main, section {
 
 footer, header {
     border: 0;
-    background-color: #009681;
+    background-color: var(--bgcolor);
     padding: 1em;
     color: white;
     display: flex;
@@ -70,8 +64,8 @@ padding:0;
 line-height: 2em;
 list-style-type: none;
 }
-aside aa {
-    color: #444;
+aside a {
+    padding: .6em;
 }
 
 section h3 {
@@ -87,16 +81,14 @@ section.test div{
 
 }
 section.test div a {
-    padding: .3em;
+    padding: .6em;
     border-radius: 1em;
     background-color: #009681;
     color:white;
-    padding-left: .6em;
-    padding-right: .6em;
 }
 
 .submit {
-    background-color: #009681;
+    background-color: var(--bgcolor);
 }
 
 section.confluence h2, div.aside div.innerCell{
@@ -116,14 +108,28 @@ section.confluence ul{
 }
 
 section.confluence li {
-    border: 1px solid silver;
+    border: 0px solid silver;
     border-radius: 1em;
     list-style-type: none;
     padding: 1em;
     margin-bottom: 1em;
 }
 
+
 section.confluence li a {
-display:inline-block;
-margin-bottom:1em;
+    margin-bottom:1em;
+    display:inline-block;
+    padding: .6em;
+}
+
+
+a {
+    text-decoration:none;
+}
+a:hover {
+    text-decoration:underline;
+    padding: .6em;
+    border-radius: 1em;
+    background-color: var(--bgcolor);
+    color:white;
 }
