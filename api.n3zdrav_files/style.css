@@ -1,0 +1,97 @@
+* {
+    border: 0px solid silver;
+}
+
+a {
+text-decoration: none;
+}
+a:hover {
+text-decoration:underline;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: sans-serif;
+}
+main, section {
+    overflow: auto;
+}
+
+footer, header {
+    border: 0;
+    background-color: #009681;
+    padding: 1em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+footer form, header form {
+    float: right;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+ footer a, header a {
+    color:white;
+ }
+
+.logo, nav {
+    display: block;
+    float: left;
+}
+.logo img {
+margin-right: 2em;}
+
+.contacts {
+    display: inline-block;
+}
+
+nav li, nav ul {
+    display: inline;
+}
+
+.contacts {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+aside {
+    float: left;
+    padding: 1em;
+}
+aside ul, aside li, nav ul, nav li {
+margin:0;
+padding:0;
+line-height: 2em;
+list-style-type: none;
+}
+aside a {
+    color: #444;
+}
+
+section h3 {
+margin-top:0;
+}
+section div {
+    float: left;
+    max-width: 20em;
+    margin-right: 1em;
+    overflow: auto;
+    padding: 1em;
+    color: #444;
+}
+section div a {
+    padding: .5em;
+    border-radius: 1em;
+    background-color: #009681;
+    color:white;
+}
+
+.submit {
+    background-color: #009681;
+}

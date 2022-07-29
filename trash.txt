@@ -1,0 +1,1764 @@
+<section class="page page_mt12">
+
+
+<div class="container">
+
+
+<div class="row">
+
+
+<div class="col-lg-10 col-lg-offset-2 col-md-9 col-md-offset-3 hidden-sm hidden-xs">
+<div class="main_head">
+
+<div class="main_head_title">
+
+</div>
+<!--Поиск по разделу-->
+  <form action="" class="main_head_search">
+<input type="text" name="s" placeholder="Поиск по разделу" class="input">
+<input type="submit" class="submit" value="">
+ </form>
+<!--Поиск по разделу-->
+
+    </div>
+    </div>
+
+
+
+
+<main class="col-lg-10 col-md-9">
+
+    <div class="main_head hidden-lg hidden-md">
+
+
+
+        <div class="main_head_title">
+
+            Решения API
+        </div>
+
+
+<!--Поиск по разделу-->
+  <form action="" class="main_head_search">
+<input type="text" name="s" placeholder="Поиск по разделу" class="input">
+<input type="submit" class="submit" value="">
+ </form>
+<!--Поиск по разделу-->
+
+            </div>
+
+
+
+
+    <div class="main_wrap">
+
+      <div class="row row_6">
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row_15">
+
+	<div style="min-width:308px;" class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="bx_3218110189_4">
+
+        <div class="project_item">
+
+
+            <div class="image">
+				            </div>
+
+
+    <div class="content">
+
+    <div class="date">
+
+     </div>
+
+
+
+    <div class="link-product link_product_center">
+    <a href="http://api.n3zdrav.ru/api/odli/odii/">Подробнее</a>
+	 </div>
+
+    </div>
+
+        </div>
+    </div>
+
+	<div style="min-width:308px;" class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="bx_3218110189_437">
+
+        <div class="project_item">
+
+
+            <div class="image">
+				            </div>
+
+
+    <div class="content">
+
+    <div class="date">
+
+     </div>
+
+
+    <div class="title blue">
+
+
+Обмен данными лабораторных исследований
+    </div>
+    <div class="text">
+    Сервис ОДЛИ предназначен для ведения, хранения, поиска и выдачи сведений по лабораторным исследованиям в рамках региона     </div>
+
+    <div class="link-product link_product_center">
+    <a href="http://api.n3zdrav.ru/api/odli/odli/">Подробнее</a>
+	 </div>
+
+    </div>
+
+        </div>
+    </div>
+
+	<div style="min-width:308px;" class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="bx_3218110189_409">
+
+        <div class="project_item">
+
+
+            <div class="image">
+				            </div>
+
+
+    <div class="content">
+
+    <div class="date">
+
+     </div>
+
+
+    <div class="title blue">
+
+
+Обмен данными рецептов
+    </div>
+    <div class="text">
+    Сервис ОДР - предназначен для учета лекарственных препаратов (ЛП),
+специализированных продуктов лечебного питания (СПЛП) и медицинских
+изделий (МИ), назначенных (выписанных) пациенту, в рамках региона    </div>
+
+    <div class="link-product link_product_center">
+    <a href="http://api.n3zdrav.ru/api/odli/odr/">Подробнее</a>
+	 </div>
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+</main>
+
+</div>
+</div>
+
+</section>
+
+</div>
+</div>
+
+     <script src="api.n3zdrav_files/jquery.min.js"></script>
+<script src="api.n3zdrav_files/jquery-native.js"></script>
+    <script src="api.n3zdrav_files/slick.min.js"></script>
+	<script src="api.n3zdrav_files/main.js"></script>
+	<script src="api.n3zdrav_files/calendar.js"></script>
+	<script src="api.n3zdrav_files/swagger-ui-standalone-preset.js"></script>
+	<script src="api.n3zdrav_files/swagger-ui-bundle.js"></script>
+	<link rel="stylesheet" href="api.n3zdrav_files/jquery.fancybox.min.css">
+	<script src="api.n3zdrav_files/jquery.fancybox.min.js"></script>
+<script>
+function setAttr(prmName,val){
+    var res = '';
+	var d = location.href.split("#")[0].split("?");
+	var base = d[0];
+	var query = d[1];
+	if(query) {
+		var params = query.split("&");
+		for(var i = 0; i < params.length; i++) {
+			var keyval = params[i].split("=");
+			if(keyval[0] != prmName) {
+				res += params[i] + '&';
+			}
+		}
+	}
+	res += prmName + '=' + val;
+	history.pushState('', '',  base + '?' + res);
+
+	return false;
+}
+
+
+$(document).on('click', '.tab_click', function(e){
+var itemhref = $(this).attr('href');
+var itemType = $(this).attr('tab-type');
+menuParseFn(itemhref, itemType);
+
+$('.tab_click').parent('li').removeClass('active');
+$(this).parent('li').addClass('active');
+
+$(".itemTab").each(function(index){
+$('.itemTab').eq(index).addClass('tab-pane');})
+
+$(itemhref).removeClass('tab-pane');
+
+	/*
+$(".itemTab").each(function(index){
+alert(itemhref.slice(1));
+if(itemhref.slice(1) == $(".itemTab").eq(index).attr('id'))
+$(".itemTab").eq(index).removeClass('tab-pane');})
+*/
+$(document).on('click', '.tab_click', function(){let atHref = $(this).attr('href'); setAttr('tab',atHref.slice(4)); })
+
+return false;
+})
+
+
+</script>
+
+	<script src="api.n3zdrav_files/bootstrap.min.js"></script>
+	<script>xCalendar(arrayDate, 'api', 2018);</script>
+
+
+
+
+<div class="docDownWind displaynone"> <img src="api.n3zdrav_files/preloader.gif"> </div>
+
+<form id="reg" action="" method="POST" class="formRef modal fade">
+<div class="modal-dialog">
+<div class="modal-content">
+<!-- Заголовок модального окна -->
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+<h4 class="modal-title">Регистрация</h4>
+</div>
+<!-- Основное содержимое модального окна -->
+<div class="modal-body">
+
+<div class="form-group">
+    <label for="name">Имя:</label>
+    <input type="text" placeholder="Имя" class="form-control" id="name" name="NAME">
+
+</div>
+
+
+<div class="form-group">
+    <label for="lastname">Фамилия:</label>
+    <input name="LAST_NAME" type="text" placeholder="Фамилия" class="form-control" id="lastname">
+
+</div>
+
+
+<div class="form-group">
+    <label for="email">Ваш E-mail:</label>
+    <input name="EMAIL" type="text" placeholder="E-mail" class="form-control" id="email">
+
+</div>
+
+
+
+<div class="form-group form-group-last">
+    <label for="password">Придумайте пароль:</label>
+    <input name="PASSWORD" type="password" placeholder="Пароль" class="form-control" id="password">
+
+</div>
+
+
+<div class="form-group-button">
+
+			<input type="hidden" name="TYPE" value="REG">
+    <input type="submit" class="btnReg btn btn-success btn-lg btn-block" value="Зарегистрироваться">
+
+
+
+</div>
+
+</div>
+
+</div>
+</div>
+</form>
+
+
+
+<form id="auth" class="modal fade">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        <!-- Заголовок модального окна -->
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">Авторизация</h4>
+        </div>
+        <!-- Основное содержимое модального окна -->
+        <div class="modal-body">
+
+
+
+
+<div class="form-group">
+            <label for="email">Ваш E-mail:</label>
+            <input type="text" placeholder="E-mail" name="EMAIL" class="form-control" id="email">
+
+        </div>
+        <div class="form-group form-group-last">
+            <label for="password">Пароль:</label>
+            <input type="password" placeholder="Пароль" name="PASSWORD" class="form-control" id="password">
+        </div>
+
+
+        <div class="form-group-button" style="width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;">
+			<input type="hidden" name="TYPE" value="AUTH">
+		<input type="submit" style="margin:0;" class="btn btn-success btn-lg" value="Войти">
+      <div>
+	 <a href="#reg" data-toggle="modal" onclick="$('.close').trigger('click');">Регистрация</a> |
+	 <a href="#repass" data-toggle="modal" onclick="$('.close').trigger('click');">Забыли пароль?</a>
+	 </div>
+        </div>
+        </div>
+        </div>
+        </div>
+</form>
+
+
+
+
+
+
+<form id="repass" class="modal fade">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        <!-- Заголовок модального окна -->
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">Восстановление пароля</h4>
+        </div>
+        <!-- Основное содержимое модального окна -->
+
+        <div class="modal-body">
+
+
+<div class="bx-authform">
+
+
+	<h3 class="bx-title">Выслать контрольную строку</h3>
+
+	<p class="bx-authform-content-container">Если вы забыли пароль, введите
+ логин или E-Mail. Контрольная строка для смены пароля, а также ваши
+регистрационные данные, будут высланы вам по E-Mail.</p>
+
+
+
+		<div class="bx-authform-formgroup-container">
+			<div class="bx-authform-label-container">Логин</div>
+			<div class="bx-authform-input-container">
+				<input type="text" name="USER_LOGIN" maxlength="255">
+			</div>
+			<span class="login-label">или</span>
+		</div>
+
+		<div class="bx-authform-formgroup-container">
+			<div class="bx-authform-label-container">E-Mail</div>
+			<div class="bx-authform-input-container">
+				<input type="text" name="USER_EMAIL" maxlength="255">
+			</div>
+		</div>
+
+
+		<div class="bx-authform-formgroup-container">
+			<input type="submit" class="btn btn-success btn-lg" name="AUTH_ACTION" value="Выслать">
+		</div>
+
+
+
+</div>
+
+<script type="text/javascript">
+	document.bform.USER_LOGIN.focus();
+</script>
+
+
+
+        <div class="form-group-button" style="width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;">
+      <div>
+		  <a href="#reg" data-toggle="modal" onclick="$('.close').trigger('click');">Регистрация</a> |
+	 <a href="#repass" data-toggle="modal" onclick="$('.close').trigger('click');">Забыли пароль?</a>
+	 </div>
+        </div>
+        </div>
+        </div>
+        </div></form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	function checkEmail(pattern, mail){
+var err;
+ if(mail != ''){
+ if(mail.search(pattern) == 0){
+err = 'Y';
+ }else{
+err = 'F';
+alert('Email введён неверно');
+ }
+ }else{
+err = 'N';
+alert('Нужно заполнить Email');
+}
+
+return err;
+}
+
+function checkInputName(dataInput){
+if(dataInput) return 'Y';
+else alert('Нужно указать имя');}
+
+function checkInputLastName(dataInput){
+if(dataInput) return 'Y';
+else alert('Нужно указать фамилию');}
+
+function checkPass(dataInput){
+if(dataInput) return 'Y';
+else alert('Нужно заполнить пароль');}
+
+
+$(document).on('submit', '#reg', function(e){
+ e.preventDefault();
+var pattern = /^[a-z0-9_.-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
+var name = $(this).find('#name').val();
+var lastname = $(this).find('#lastname').val();
+var mail = $(this).find('#email').val();
+var pass = $(this).find('#password').val();
+
+if(checkEmail(pattern, mail) == 'Y' && checkInputLastName(lastname) == 'Y' && checkInputName(name) == 'Y' && checkPass(pass) == 'Y'){
+          $.ajax({
+               type: "POST",
+			   url: '/local/inc/php/user/reg.php',
+			  data: $(this).serialize(),
+               success: function(data){
+if(data == 'N')
+{alert('Ошибка регистрации');}
+else{
+	window.location.href= window.location.protocol+'//'+window.location.hostname+'/user/';
+}
+					}
+		  })}
+
+
+})
+</script>
+<!--Регистрация-->
+
+<!--Регистрация-->
+<script>
+$(document).on('submit', '#auth', function(e){
+ e.preventDefault();
+var pattern = /^[a-z0-9_.-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
+var mail = $(this).find('#email').val();
+var pass = $(this).find('#password').val();
+
+	if(checkEmail(pattern, mail) == 'Y' && checkPass(pass) == 'Y'){
+          $.ajax({
+               type: "POST",
+			   url: '/local/inc/php/user/reg.php',
+			  data: $(this).serialize(),
+               success: function(data){
+if(data == 'N')
+{alert('Ошибка авторизации');}
+else{
+	window.location.href= window.location.protocol+'//'+window.location.hostname+'/user/';
+}
+					}
+		  })}
+
+})
+</script>
+<!--Регистрация-->
+
+
+<script>
+	function filterApi(method, sort, url){
+$(".classToggle").fadeOut();
+          $.ajax({
+                    type: "GET",
+                    url: url,
+                     data: {
+						 method:method,
+						 sort:sort
+},
+                    success: function(html){
+                    $('.ajaxApi').html(html);
+					$(".classToggle").fadeIn();
+					}
+});
+
+}
+
+
+
+$(document).on('click', '.filter_desc_content a, .filter_abc_content a, .filterapi', function(){
+var method = $(this).attr('method');
+var sort = $(this).attr('sort');
+var explod = '/';
+var periodSort = '';
+var dataNum = '';
+if(!method){
+var method = $(this).parents('.filter_abc_content').find('ul').attr('method');
+var sort = $(this).text();
+var htmlIco = ' <i class="fa fa-sort-alpha-asc" aria-hidden="true"></i>';
+$('.clmABS').html(sort+' '+htmlIco);}
+
+if($(this).hasClass('filterapi')){
+var valSelect =$('.selectCalc').val();
+sort = $(this).attr('numday')+'.'+$(this).attr('month')+'.'+valSelect;
+
+
+var htmlIco = '<i class="fa fa-calendar" aria-hidden="true"></i>';
+
+	$('.clmCAL').each(function(inClm){
+
+		if($('.clmCAL').eq(inClm).hasClass('active')){
+
+        dataNum = $('.clmCAL').eq(inClm).attr('data-type');
+
+
+		$('.clmCAL').eq(inClm).attr('data-val', sort);
+		$('.clmCAL').eq(inClm).html(sort+' '+htmlIco);
+		}
+})
+
+
+if(dataNum  == 'd1'){
+	/*Добавляем/удаляем active для d1*/
+$(".xCalendar").find(".day li").removeClass('active');
+$(this).addClass('active');
+}
+if(dataNum  == 'd2'){
+	/*Добавляем/удаляем active для d2*/
+$(".xCalendar").find(".day li").removeClass('active2');
+$(this).addClass('active2');
+}
+
+ $('.thisCAL').each(function(thisCAL){ if(thisCAL>0) explod = '/';else explod =''; var thisDay = $('.thisCAL').eq(thisCAL).attr('data-val'); if(!thisDay) thisDay = ''; periodSort = periodSort+explod+thisDay});
+sort = periodSort;
+
+}
+filterApi(method, sort, '/local/components/news/event.php');
+return false;
+
+})
+
+
+
+	function forumLike(block, user, value, url, el){
+
+          $.ajax({
+                    type: "GET",
+                    url: url,
+                     data: {
+						 block:block,
+						 user:user,
+						 value:value
+},
+                    success: function(data){
+data = JSON.parse(data);
+if(data.dlike> 0) var m = '-'; else var m = '';
+el.parents('.left_content').find(".nDlike").html(m+data.dlike);
+el.parents('.left_content').find(".nlike").html(data.like);
+					}
+});
+
+}
+
+
+
+
+
+	function forumSection(message, title, tags, notify, api, url){
+
+          $.ajax({
+                    type: "POST",
+                    url: url,
+                     data: {
+						 message:message,
+						 title:title,
+						 tags:tags,
+						 notify:notify,
+						 api:api
+},
+                    success: function(topic){
+
+						window.location.href= window.location.protocol+'//'+window.location.hostname+'/forum/topic/'+topic+'/';
+
+}
+});
+
+}
+
+
+function userProfile(pass, passnew, url){
+
+          $.ajax({
+                    type: "POST",
+                    url: url,
+                     data: {
+						 pass:pass,
+						 passnew:passnew
+},
+                    success: function(res){
+
+alert(res);
+}
+});
+}
+
+$(document).on('click', '.removePass', function(){
+var pass = $(".pass").val();
+var passnew = $(".passnew").val();
+userProfile(pass, passnew, '/local/inc/php/user/pass.php');
+});
+
+
+
+
+$(document).on('click', '.addTopic', function(){
+var title = $('.titleTopic').val();
+var message = $('.messageTopic').val();
+var tags = $('.tagsTopic').val();
+var api = $('.elApi').val();
+var notify = 0;
+if($(".notify").prop("checked")) notify = 1;
+else notify = 0;
+
+	forumSection(message, title, tags, notify, api, '/local/components/news/addSectionForum.php');
+
+});
+
+
+
+$(document).on('click', '.aL', function(){
+var user = $(this).attr('user');
+var block = $(this).attr('block');
+var value = $(this).attr('value');
+forumLike(block, user, value, '/local/inc/php/forum/like.php', $(this));
+});
+
+$(document).on('change', '#uploadimage', function(e){
+
+
+ var $input = $("#uploadimage");
+    var fd = new FormData;
+
+    fd.append('file', $input.prop('files')[0]);
+
+    $.ajax({
+		url: '/local/inc/php/user/downimg.php',
+        data: fd,
+        processData: false,
+        contentType: false,
+        type: 'POST',
+        success: function (data) {
+$('.photouser').attr('src', data);
+}
+    });
+
+
+  });
+
+</script>
+<!--Публикация API-->
+<script>
+function actionAPI(value, id, url){
+         $.ajax({
+                    type: "POST",
+                    url: url,
+                     data: {
+						 value:value,
+						 id:id
+},
+                    success: function(topic){
+						window.location.href="";
+}
+});}
+</script>
+<!--Публикация API-->
+
+
+<!--Публикация Сообщений-->
+<script>
+function actionMES(value, id, url){
+         $.ajax({
+                    type: "POST",
+                    url: url,
+                     data: {
+						 value:value,
+						 id:id
+},
+                    success: function(data){
+						window.location.href="";
+}
+});}
+</script>
+<!--Публикация Сообщений-->
+
+
+<!-- Подсветка Фильтра алфавита -->
+<script>
+function in_array(value, array) {
+    for(var i=0; i<array.length; i++){
+        if(value == array[i]) return true;
+    }
+}
+var arrayData = arrayData.split(',');
+$(".filter_abc_content").find('li').each(function(index){
+if(in_array($(".filter_abc_content").find('li').eq(index).text(), arrayData))
+{
+$(".filter_abc_content").find('li').eq(index).addClass('indGreen');
+} })
+
+</script>
+<!-- Подсветка Фильтра алфавита -->
+
+
+<!-- Подписка -->
+<script>
+$(document).on('input', '.subscribe', function(){
+var section = $(".idSection").attr('data');
+		$.ajax({
+           type: "POST",
+		   url: '/local/inc/php/user/subscribe.php',
+           data: {
+						 section:section,
+},
+                    success: function(data){
+
+alert(data);
+}
+});
+
+})
+</script>
+<!-- Очистка соощений -->
+
+
+
+
+<!-- настройки -->
+<script>
+$(document).on('input', '.setcheck input', function(){
+var value = $(this).attr('value');
+var id = $(this).attr('dataid');
+$.ajax({
+           type: "POST",
+		   url: '/local/inc/php/setting/block.php',
+           data: {
+						 value:value,
+			   			id:id
+},
+                    success: function(data){
+
+window.location.href="";
+}
+});
+
+})
+</script>
+
+<script>
+$(document).on('submit', '#settingContact', function(e){
+ e.preventDefault();
+          $.ajax({
+               type: "POST",
+			   url: '/local/inc/php/setting/contact.php',
+			   data: $(this).serialize(),
+               success: function(data){
+window.location.href="";
+					}
+})})
+</script>
+
+<!-- настройки -->
+
+
+<!-- Подписка -->
+<script>
+	$(document).on('click', '.clearmessage', function(){
+    $.ajax({type: "POST", url: "/local/inc/php/user/clearmessage.php", data: {value:'action'},
+    success: function(data){window.location.href="";}});
+	return false;})
+</script>
+
+<!-- Очистка соощений -->
+
+<!--окно с настройками-->
+<script>
+$(document).on('click', '.settingLogo', function(){
+$('.settingWind').removeClass('displaynone');
+})
+$(document).on('click', '.settingclose', function(){
+$('.settingWind').addClass('displaynone');
+})
+</script>
+<!-- Окно с настройками -->
+
+<script>
+function messageTimer(){
+alert('Сохранено');
+}
+var timer;
+$(document).on('input', '.usermobile', function(){
+var el = $(this);
+clearTimeout(timer);
+
+$.ajax({
+               type: "POST",
+			   url: '/local/inc/php/user/phone.php',
+			  data: {value:el.val()},
+               success: function(data){
+
+					}
+		  })
+
+timer=setTimeout(messageTimer,2000);
+ })
+</script>
+
+
+<!-- Работа с API -->
+<script>
+function tabReady(id){
+   var id = "";
+	$.ajax({type: "POST", url: '/local/inc/php/updateapi/newtab.php', cache:false, data:{dataid:id}, success: function(data){$(".ajaxTAB").html(data);}})
+}
+
+
+$(document).on('click', '.newtab', function(){
+var dataid = $(this).attr('dataid');
+var datatype = $(this).attr('datatype');
+var name = $("#nameTAB").val();
+	if(name){
+          $.ajax({
+               type: "POST",
+			   url: '/local/inc/php/updateapi/newtab.php',
+			  data: {dataid:dataid, name:name, datatype:datatype},
+               success: function(data){
+ $("#nameTAB").css({'border':''});
+tabReady();
+					}
+})
+}else {$("#nameTAB").css({'border':'1px solid red'});}
+
+})
+
+	/*Изменяем имя TAB*/
+$(document).on('click', '.updatename', function(){
+var dataid = $(this).attr('dataid');
+var name = $("#nameUpdate").val();
+	if(name){
+$("#nameUpdate").css({'border':''});
+          $.ajax({
+               type: "POST",
+			   url: '/local/inc/php/updateapi/renameTAB.php',
+			  data: {dataid:dataid, name:name},
+               success: function(data){
+				   if(data == 'Y'){
+ tabReady();
+}
+					}
+})
+}else $("#nameUpdate").css({'border':'1px solid red'});
+})
+	/*Изменяем имя TAB*/
+
+
+	/*Изменяем ПОЗИЦИЮ TAB*/
+$(document).on('click', '.updateposition', function(){
+var dataid = $(this).attr('dataid');
+var valname = $("#namePosition").val();
+          $.ajax({
+               type: "POST",
+			   url: '/local/inc/php/updateapi/priorityTAB.php',
+			  data: {dataid:dataid, value:valname},
+               success: function(data){
+				   if(data == 'Y'){
+ tabReady();
+} else alert('Ошибка');
+					}
+})})
+	/*Изменяем ПОЗИЦИЮ TAB*/
+
+$(document).on('click', '.deleteTAB', function(e){
+var datadel = $(this).attr('dataid');
+var datatype = $(this).attr('datatype');
+var dataid = $(this).attr('dataitem');
+
+          $.ajax({
+               type: "POST",
+			   url: '/local/inc/php/updateapi/newtab.php',
+			  data: {dataid:dataid, datadel:datadel, datatype:datatype},
+               success: function(data){
+$(".ajaxTAB").html(data);
+					}
+}) })
+
+
+/*работаем с PDF или WORD*/
+
+function docDown(ulink, typefile){
+var linkdonw;
+$.ajax({dataType: 'native',url: ulink,xhrFields: {responseType: 'blob'},success: function(blob){
+    console.log(blob.size);
+      var link=document.createElement('a');
+      link.href=window.URL.createObjectURL(blob);
+
+if(typefile == 'pdf')
+	 linkdonw = 'file.'+typefile;
+else linkdonw = ulink;
+
+link.download= linkdonw;
+link.click()
+
+$('.docDownWind').addClass('displaynone');
+
+}});
+
+}
+
+function expDOC (thisEl, type){
+var ajaxurl, hostname, protocol;
+hostname = window.location.hostname;
+protocol = window.location.protocol;
+$('.docSave').html('');
+var savehtml = thisEl.parents('.itemTab').find('.content_page').html();
+$('.docSave').html(savehtml);
+
+$('.docSave').find('img').each(function(index){var elImg = $('.docSave').find('img').eq(index);
+
+if(type == 'word'){ elImg.attr('style', 'width:500px;');}
+if(type == 'pdf'){ elImg.attr('style', 'width:350px;height:auto;margin:30px; ');}
+hostname = window.location.hostname;
+var newURL = window.location.protocol+'//'+window.location.hostname+elImg.attr('src');
+
+newURL =  protocol+'//'+hostname+'/local/inc/php/genDOC/func/resimg.php?s='+newURL;
+
+elImg.attr('src', newURL); elImg.before('<br><br>'); elImg.after('<br><br>'); })
+
+
+$('.docSave').find('tbody').each(function(index)	{ 		$('.docSave').find('tbody').eq(index).attr('style', ''); })
+$('.docSave').find('th').each(function(index)		{		$('.docSave').find('th').eq(index).attr('style', 'border: 1px solid #333;'); })
+$('.docSave').find('tr').each(function(index)		{		$('.docSave').find('tr').eq(index).attr('style', ''); })
+$('.docSave').find('table').each(function(index){		$('.docSave').find('table').eq(index).attr('style', 'max-width:700px;font-size:90%;border-collapse:collapse;border:1px solid #333;'); })
+$('.docSave').find('td').each(function(index)		{ 		$('td').eq(index).attr('style', 'border: 1px solid #333;'); })
+
+var resHtml = $('.docSave').html();
+
+      $.ajax({
+               type: "POST",
+			   url: '/local/inc/php/genDOC/saveHTML.php',
+			  data: {savehtml:resHtml},
+               success: function(data){
+
+if(type == 'pdf'){
+docDown(window.location.protocol+'//'+window.location.hostname+'/local/inc/php/genDOC/pdf/', type);
+
+}
+
+if(type == 'word'){
+ $.ajax({url: '/local/inc/php/genDOC/word/',   success: function(file){
+
+docDown(window.location.protocol+'//'+window.location.hostname+file, type);
+
+}})
+
+}
+$('.docSave').html('');
+					}
+})
+
+
+}
+
+
+	$(document).on('click', '.expWORD', function(){ elThis = $(this);  if($('.docDownWind').removeClass('displaynone')){  setTimeout(function(){
+		expDOC(elThis, 'word'); }, 1000); return false; }})
+	$(document).on('click', '.expPDF', function(){ elThis = $(this); if($('.docDownWind').removeClass('displaynone')){ setTimeout(function(){ expDOC(elThis, 'pdf'); }, 1000); return false; }})
+
+
+/*
+var progressCheck = function() {
+$.get("/local/inc/php/updateapi/progress.php",function(data) { $(".formResultApi").val($(".formResultApi").val()+data); });}
+Выполнение чтения документа из сервиса
+var timer2;
+*/
+
+
+$(document).on('click', '.addContentApi', function(e){
+	$(".formResultApi").val('Идёт процесс выгрузки... \n');
+
+var urlapi = $(".urlapi").val();
+var dataid = $(this).attr('dataid');
+	if(urlapi){
+$(".urlapi").css({'border':''});
+$.ajax({
+               type: "POST",
+			   url: '/local/inc/php/updateapi/readAPI.php',
+	data: {urlapi:urlapi, dataid:dataid},
+               success: function(data){
+				   /*$(".formResultApi").html(data);*/
+$(".formResultApi").val($(".formResultApi").val()+data);
+				   /*$(".goTopanel").html('<a href="/bitrix/admin/iblock_element_edit.php?IBLOCK_ID=18&type=data&ID='+data+'&lang=ru&find_section_section=-1&WF=Y" target="_blank" >Перейти в панель</a>');*/
+					}
+})
+} else
+$(".urlapi").css({'border':'1px solid red'});
+
+})
+/*Выполнение чтения документа из сервиса*/
+
+
+$(document).ready(function(){tabReady();})
+
+
+$(document).on('click', '.actionReader', function(){
+thisTab = $(this);
+var dataid = $(this).attr('dataid');
+var datapriority = $(this).attr('datapriority');
+var docurl = $(this).attr('docurl');
+var faq = $(this).attr('faq');
+var forumname = $(this).attr('forumname');
+datapriority = parseInt(datapriority);
+	/*Устанавливаем/Снимает checkbox если включен или выключен раздел faq*/
+if(faq == 'Y'){
+$('.fadeCont').addClass('displaynone');
+$("#OnFaq").attr('checked', true);
+$("#OnFaq").attr('checked', 'checked');
+$(".faqRemove").attr('data-checked', 'Y');
+$('.fadeRemove').removeClass('displaynone');
+
+$('.sectionSelect select').attr('dataid', dataid);
+if(forumname)
+{$('.optionForum').text(forumname);}
+else{$('.optionForum').text('Нет');}
+
+}else{
+$(".faqRemove").attr('data-checked', 'Y');
+$('.fadeCont').removeClass('displaynone');
+$("#OnFaq").attr('checked', false);
+$('.fadeRemove').addClass('displaynone');
+}
+
+	$('.faqRemove').attr('dataid', dataid);
+	$(".urlapi").val(docurl);
+    $("#namePosition").val(datapriority);
+	$("#OnFaq").attr('dataid', dataid); // добавляем к кнопке faq id вкладки
+	$(".updateposition").attr('dataid', dataid); // добавляем dataid для кнопки смены приоритета
+	$(".addSwagger").attr('dataid', dataid); // добавляем dataid для кнопки активации swagger
+	$('.titleControl').find("span").text($(this).text()); // меняем название при клике по кнопкам
+	$('#nameUpdate').val($(this).text()); // добавляем в input имя вкладки
+	$('.addContentApi').attr('dataid', dataid); // добавляем dataid для кнопки
+	$('.updatename').attr('dataid', dataid); // передаём dataid кнопке смены имени вкладки
+	$(".controlReader").removeClass('displaynone'); // удаляем класс скрытия у панели управления, для отображения
+	$('.formSwagger, .urlapi, #nameUpdate, #namePosition').css({'border':''}); // на всякий случай убираем border
+	$('.updateCode').addClass('displaynone'); //каждый раз скрываем редактор
+})
+
+
+
+</script>
+<!-- Работа с API -->
+
+
+
+<script>
+var itemTabEq = $('.tab_click').eq(0).attr('href');
+var hContent = 0;
+var attrId;
+var ih;
+
+
+	function menuParseFn(tabid, tabtype){
+if(tabtype == 'swagger') $('.menu_left_wrap').css({'display':'none'});
+else $('.menu_left_wrap').css({'display':''});
+
+$(".parseNav .parentUl").html('');
+var hContent = 0;
+var attrId;
+var ih;
+var cnH1 = 0;
+var cnH2 = 0;
+$(tabid+' .content_page h1').each(function(index){
+ih = 0;
+hContent = $(tabid).find('h1').eq(index).text();
+attrId = $(tabid).find('h1').eq(index).attr('id');
+$(".parseNav .parentUl").html($(".parseNav .parentUl").html()+"<li class='parentListParse drop_menu' onclick='' > <a  href='#"+attrId+"' >"+hContent+"</a> <ul class='childUl sub_menu'></ul> </li>");
+var iIndex = index+1;
+var countMenu = 0;
+$(tabid).find('h1').eq(index).nextUntil(tabid+' h1:eq('+iIndex+')', 'h2').each(function(index2){
+var getFadeText = $(tabid+' h2').eq(cnH2).text();
+var getFadeTId = $(tabid+' h2').eq(cnH2).attr('id');
+$(".parseNav .childUl").eq(index).html($(".parseNav .childUl").eq(index).html()+"<li class='subitem'><a href='#"+getFadeTId+"'>"+getFadeText+"</a></li>");
+countMenu++;
+cnH2++;
+})
+var elLI =$(".parseNav .parentUl").find('.parentListParse').eq(index);
+if(countMenu == 0){ elLI.removeClass('drop_menu'); elLI.find('ul').remove(); elLI.addClass('nextAncor');}
+	else{
+elLI.attr('onclick', 'return false');
+	}
+cnH1++;
+})
+
+if(cnH1 == 0){
+
+
+$(".parseNav .parentUl").html('');
+var hContent = 0;
+var attrId;
+var ih;
+var cnH1 = 0;
+var cnH2 = 0;
+$(tabid+' .content_page h2').each(function(index){
+ih = 0;
+hContent = $(tabid).find('h2').eq(index).text();
+attrId = $(tabid).find('h2').eq(index).attr('id');
+$(".parseNav .parentUl").html($(".parseNav .parentUl").html()+"<li class='parentListParse drop_menu' onclick='' > <a  href='#"+attrId+"' >"+hContent+"</a> <ul class='childUl sub_menu'></ul> </li>");
+var iIndex = index+1;
+var countMenu = 0;
+$(tabid).find('h2').eq(index).nextUntil(tabid+' h2:eq('+iIndex+')', 'h3').each(function(index2){
+var getFadeText = $(tabid+' h3').eq(cnH2).text();
+var getFadeTId = $(tabid+' h3').eq(cnH2).attr('id');
+$(".parseNav .childUl").eq(index).html($(".parseNav .childUl").eq(index).html()+"<li class='subitem'><a href='#"+getFadeTId+"'>"+getFadeText+"</a></li>");
+countMenu++;
+cnH2++;
+})
+var elLI =$(".parseNav .parentUl").find('.parentListParse').eq(index);
+	if(countMenu == 0){ elLI.removeClass('drop_menu'); /*elLI.find('ul').remove();*/ elLI.addClass('nextAncor');}
+	else{
+elLI.attr('onclick', 'return false');
+	}
+cnH1++;
+})
+
+}
+
+
+	}
+
+	$(document).ready(function(){
+menuParseFn($('.tab_click').eq(0).attr('href'), $('.tab_click').eq(0).attr('tab-type'));
+	});
+
+
+
+
+
+$(document).ready(function(){
+$(".content_page a").each(function(index){
+if($(".content_page a").eq(index).attr('data-nice-type') == 'Multimedia')
+{
+var dmType = $(".content_page a").eq(index).attr('data-mime-type');
+var videoHref = $(".content_page a").eq(index).attr('href');
+	var dataV = '<br><video  loop="loop" controls="controls" tabindex="0" style="width: 300px;cursor:pointer;" ><source src="'+videoHref+'"  type="'+dmType+'"></video><br>';
+$(".content_page a").eq(index).after(dataV);
+} })
+})
+</script>
+
+
+
+
+<script>
+	/*
+$(document).on('click', '.subitem, .drop_menu', function(){
+
+	if($(this).hasClass('subitem')){
+ window.location.hash =$(this).find('a').attr('href');
+return false;
+}
+	if($(this).hasClass('drop_menu')){
+if(!$(this).hasClass('menu_left_active'))
+	{
+	$(this).addClass('menu_left_active');
+	$(this).find('.sub_menu').css({'display':'block'});
+	}
+	else{
+	$(this).removeClass('menu_left_active');
+	$(this).find('.sub_menu').css({'display':'none'});
+	}
+	}
+
+
+})
+*/
+
+</script>
+
+<style>
+
+#button-up{
+  	display: none;
+	opacity: 0.5;
+    filter: alpha(opacity=50);
+    position: fixed;
+    right: 25px;
+    bottom: 100px;
+    transition: .3s;
+    background: #009681;
+    width: 79px;
+    padding: 6px;
+    text-align: center;
+    border-radius: 3px;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+#button-up:hover{
+  cursor: pointer;
+  opacity: 1;
+  filter:alpha(opacity=100);
+  transition: .3s;
+}
+
+</style>
+
+<div id="button-up">Наверх</div>
+<script>
+$(document).ready(function() {
+  var button = $('#button-up');
+  $(window).scroll (function () {
+    if ($(this).scrollTop () > 400) {
+      button.fadeIn();
+    } else {
+      button.fadeOut();
+    }
+});
+button.on('click', function(){
+$('body, html').animate({
+scrollTop: 0
+}, 800);
+return false;
+});
+});
+</script>
+
+<script>
+var elImg;
+var thisEl;
+$('.tab-content .confluence-embedded-image').each(function(index){
+thisEl = $(this);
+var srcImg = thisEl.attr('src');
+var elhtml = thisEl.parent().html();
+thisEl.parent().html('<a data-fancybox="gallery" href="'+srcImg+'">'+elhtml+'</a>');
+})
+
+	/*Удаляем значки файла у изображений*/
+$('.confluence-embedded-file-wrapper').each(function(index){
+if($('.confluence-embedded-file-wrapper').eq(index).find('img').is(".confluence-embedded-image"))
+{
+	$('.confluence-embedded-file-wrapper').eq(index).addClass('beforenone');
+}
+});
+
+</script>
+
+<!--Скрипт для отображения полосы прокруты у больших балиц -->
+<script>
+	$(document).ready(function(){
+var iTab;
+var arStr, strEntry, str;
+$('.tab-content table').each(function(inTable){
+iTab = 0;
+$('.tab-content table').eq(inTable).find('tr').each(function(inTr){
+if($('.tab-content table').eq(inTable).find('tr').eq(inTr).text().length > 120)
+	$('.tab-content table').eq(inTable).parent('.table-wrap').css({'overflow-x':'scroll'});
+
+}) }) })
+</script>
+
+
+<!-- Подтверждение регистрации -->
+<script>
+$(document).on('click', '.actionButton', function(e){
+var actioncode = $('.actionProfile').val();
+          $.ajax({
+               type: "POST",
+			   url: '/local/inc/php/user/action.php',
+			  data: {actioncode:actioncode},
+               success: function(data){
+
+if(data == 'Y') location.reload();
+else if(data == 'N') alert('Код указан неверно');
+else if(data == 'NULL') alert('Поле пуестое');
+					}
+}) })
+</script>
+<!-- Подтверждение регистрации -->
+
+
+<!-- Проверка модальных окон, если есть сообщение, то поднимает pop-up -->
+<script>
+var linkModal = $('.modal .alert').parents('.modal').attr('id');
+$('a[href="#'+linkModal+'"]').trigger('click');
+</script>
+<!-- Проверка модальных окон, если есть сообщение, то поднимает pop-up -->
+
+
+
+<!-- форум -->
+<script>
+let timerPopUp;
+    	function forumMessage(userid, message, section, url, owner){
+
+          $.ajax({
+                    type: "POST",
+                    url: url,
+                     data: {
+						message:message,
+						section:section,
+						userid:userid,
+					    owner:owner,
+},
+                    success: function(data){
+data = JSON.parse(data);
+						if(data.status == 'Y'){
+$('.commets').prepend(data.html);
+$('.userSubject').val('');
+$('body, html').animate({
+scrollTop: 0
+}, 800);
+
+}
+else alert('Ошибка');
+}
+});
+
+}
+
+
+function forumReMessage(userid, message, dataid, url, owner){
+
+$.ajax({
+                    type: "POST",
+                    url: url,
+                     data: {
+						 userid:userid,
+						 message:message,
+						 dataid:dataid,
+						 owner:owner,
+},
+                    success: function(data){
+data = JSON.parse(data);
+						if(data.status == 'Y'){
+$('#'+data.commid).append(data.html);
+$(".textReMessage").val('');
+}
+else alert('Ошибка');
+}
+});
+
+}
+
+
+        $(document).on('click', '.actionReMessage', function(){
+let userid = $(this).attr('userid');
+let reMessage = $(this).parents('.comment__content').find('textarea').val();
+let dataid = $(this).attr('dataid');
+let owner   = $('.idSection').attr('owner');
+
+	forumReMessage(userid, reMessage, dataid, '/local/components/news/addSubjectForum.php', owner);
+
+});
+
+
+
+
+
+    $(document).on('click', '.addSubject', function(){
+let userid  = $(this).attr('userid');
+let section = $('.idSection').attr('data');
+let owner   = $('.idSection').attr('owner');
+let message = $('.userSubject').val();
+
+	forumMessage(userid, message, section, '/local/components/news/addSubjectForum.php', owner);
+
+});
+
+
+
+
+
+
+function reMessageShow(el){
+	$('.fadeReMessage').css({'display':'none'});
+el.parents('.comment__content').find('.fadeReMessage').show();
+}
+
+let cMess, arrFormat;
+arrFormat = ['ответ', 'ответа', 'ответов'];
+
+ function num2str(n, text_forms) {
+        n = Math.abs(n) % 100; var n1 = n % 10;
+        if (n > 4 && n < 20) { return text_forms[2]; }
+        if (n1 > 1 && n1 < 5) { return text_forms[1]; }
+        if (n1 == 1) { return text_forms[0]; }
+        return text_forms[2];
+    }
+
+$(function(){
+cMess = parseInt($(".cMess").text());
+$('.calFormatMessage').text(num2str(cMess, arrFormat));
+})
+
+
+	function togglePopUp(){
+
+$('.commPreloader').addClass('displaynone');
+
+}
+
+	function animateCmess(cMess, calc){
+		/*$(".cMess").css({'display':'none'});
+*/
+
+$(".cMess").text(cMess+calc);
+
+		/*$(".cMess").show(500);
+*/}
+
+    function showReMessage(){
+let dataid, status, timer, commid, thisEl, cMess, i=0;
+
+$(document).find('.comment_li_children').each(function(index){
+thisEl = $(this);
+if(thisEl.attr('check') == 'false'){i++;}
+});
+
+if(i > 0){
+
+$(document).find('.comment_li_children').each(function(index){
+thisEl = $(this);
+
+if(thisEl.attr('check') == 'false'){
+commid = 'comm_'+$(this).attr('dataid');
+dataid = $(this).attr('dataid');
+$.ajax({
+               type: "POST",
+			   url: '/local/inc/php/forum/children_message.php',
+	           data: { dataid:dataid, commid:commid },
+               success: function(data){
+				   if(data){
+			cMess = parseInt($(".cMess").text());
+			clearTimeout(timer);
+			clearTimeout(timerPopUp);
+			data = JSON.parse(data);
+			$('#'+data.commid).append(data.html);
+			animateCmess(cMess, data.calc);
+			$('.calFormatMessage').text(num2str(cMess, arrFormat));
+			$('.comment_li').show(500);
+			timer=setTimeout(showReMessage,500);
+			timerPopUp = setTimeout(togglePopUp,3000);
+				   }
+} })
+
+thisEl.attr('check', 'true');
+
+
+}
+
+});
+
+}
+    }
+
+
+let commid, dataid, isPaused;
+
+$('.commets li').each(function(index){
+clearTimeout(timer);
+thisEl =  $('.commets li').eq(index);
+dataid = $('.commets li').eq(index).attr('dataid');
+commid = 'comm_'+$(this).attr('dataid');
+$.ajax({
+               type: "POST",
+			   url: '/local/inc/php/forum/children_message.php',
+	           data: { dataid:dataid, commid:commid },
+               success: function(data){
+				   if(data){
+			cMess = parseInt($(".cMess").text());
+			clearTimeout(timer);
+			clearTimeout(timerPopUp);
+			data = JSON.parse(data);
+		    $('#'+data.commid).append(data.html);
+			animateCmess(cMess, data.calc);
+			$('.calFormatMessage').text(num2str(cMess, arrFormat));
+			$('.comment_li').show(500);
+			timer=setTimeout(showReMessage,500);
+			timerPopUp = setTimeout(togglePopUp,3000);
+				   }
+timer=setTimeout(showReMessage,500);
+} })
+
+});
+
+
+
+</script>
+
+
+
+
+<script>
+
+function faq(dataid, checked){
+		$.ajax({
+           type: "POST",
+			url: '/local/inc/php/updateapi/faq.php',
+			data: { dataid:dataid, checked:checked },
+success: function(data){
+	if(data == 'Y'){
+thisTab.attr('faq', 'Y');
+alert('Вкладка установлена как FAQ');
+	}else {
+thisTab.attr('faq', 'N');
+alert('Вкладка больше не является FAQ');}
+} });
+}
+
+$(document).on('input', '#OnFaq', function(){
+var dataid = $(this).attr('dataid');
+var checked = $(this).prop("checked");
+if(checked == true){ checked = 'Y'; $('.fadeCont').addClass('displaynone');  $('.fadeRemove').removeClass('displaynone');}
+else{ checked = 'N'; $('.fadeCont').removeClass('displaynone'); }
+faq(dataid, checked);
+ })
+
+$(document).on('click', '.faqRemove', function(){
+var dataid = $(this).attr('dataid');
+var checked = $(this).attr("data-checked");
+if(checked == 'Y'){ checked = 'N'; $('.fadeCont').removeClass('displaynone'); $('.fadeRemove').addClass('displaynone'); $("#OnFaq").attr('checked', false);}
+faq(dataid, checked); })
+
+
+</script>
+
+<style>
+	.indGreen { color: green !important;
+    background: #bfbfbf;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;}
+</style>
+
+
+<style>
+.swagger-ui .info .title small pre {
+	padding: 1px;
+	background-color: #444;
+}
+.swagger-ui .info .title small {
+    font-size: 10px;
+    position: relative;
+    top: -5px;
+    display: inline-block;
+    margin: 0 0 0 5px;
+    padding: 4px;
+    vertical-align: super;
+    border-radius: 57px !important;
+    background: #89bf04 !important;
+}
+.swagger-ui .info .title small pre.version {
+    background-color: #89bf04;
+    border: 0px;
+  }
+.swagger-ui pre.version {
+      padding: 0px;
+      max-width: 60px;
+      border: 0px;
+  }
+.swagger-ui .info .title small pre {
+      padding:0px;
+  }
+.swagger-ui .info .title small {
+      background-color: rgb(137, 191, 4);
+  }
+  .swagger-ui table th, .swagger-ui table td {
+      padding: 10px !important;
+  }
+  .swagger-ui table th {
+    color: white;
+    font-size:16px;
+}
+.swagger-ui .col_header {
+    color: white !important;
+}
+div#swagger-ui {
+    border: 1px solid #dedede;
+}
+.swagger-ui .info .title small pre {
+	padding: 1px;
+	background-color: #444;
+}
+.swagger-ui .info .title small {
+    font-size: 10px;
+    position: relative;
+    top: -5px;
+    display: inline-block;
+    margin: 0 0 0 5px;
+    padding: 4px;
+    vertical-align: super;
+    border-radius: 57px !important;
+    background: #89bf04 !important;
+}
+.swagger-ui .info .title small pre.version {
+    background-color: #89bf04;
+  }
+.swagger-ui li.tabitem {
+    list-style: none !important;
+}
+.swagger-ui .response-col_description__inner p {
+  color: white;
+  font-style: normal;
+  font-size: 12px;
+}
+.swagger-ui pre.version {
+    padding: 0px;
+}
+.swagger-ui .info .title small pre {
+    padding:0px;
+}
+.swagger-ui .info .title small {
+    background-color: rgb(137, 191, 4);
+}
+.swagger-ui a.tablinks {
+    margin-right: 20px;
+}
+.swagger-ui td.col.response-col_status {
+    padding: 10px !important;
+}
+.swagger-ui .opblock .opblock-section-header h4 {
+  font-size: 18px !important;
+  font-weight: bold;
+  padding: 0px;
+}
+.swagger-ui td.col, .swagger-ui td.col.col_header.response-col_description {
+    padding: 10px;
+}
+.swagger-ui h4.opblock-title_normal {
+    font-size: 16px;
+    font-style: italic;
+}
+.swagger-ui h4.opblock-title_normal[id] {
+    padding-bottom: 15px;
+    font-style: italic;
+  }
+.swagger-ui {
+  border: 1px solid #dedede;
+}
+.swagger-ui select {
+    font-weight: normal !important;
+    font-family: monospace;
+}
+.swagger-ui table {
+  table-layout: auto !important;
+}
+.swagger-ui .scheme-container {
+  padding: 0px 0px 15px 0px;
+}
+.swagger-ui .renderedMarkdown p {
+    font-size: 14px;
+}
+.swagger-ui tr.response p {
+  font-style: italic;
+}
+.swagger-ui table.model tbody tr td {
+  padding: 1em !important;
+}
+.response-content-type.controls-accept-header small code {
+    font-size: 12px;
+  }
+.swagger-ui .opblock-summary-path a.nostyle {
+    font-family: monospace;
+}
+.swagger-ui .info {
+  /* margin: -25px 0px !important; */
+}
+.swagger-ui .main span.url {
+    display: none;
+}
+.swagger-ui span.opblock-summary-path a.nostyle {
+    font-family: Monospace !important;
+    size: 16px;
+}
+.swagger-ui .opblock-description-wrapper, .swagger-ui .opblock-external-docs-wrapper, .swagger-ui .opblock-title_normal {
+    padding: 15px 20px 5px 20px;
+}
+.swagger-ui h1[id], .swagger-ui h2[id], .swagger-ui h3[id], .swagger-ui h4[id], .swagger-ui h5[id] {
+    margin: 0px;
+    padding: 0px;
+}
+.swagger-ui pre {
+    font-family: Monaco, Monospace !important;
+    font-size: 11px;
+  }
+h6, h6 code.highlighter-rouge {
+    font-size: 16px;
+}
+.swagger-ui .responses-inner h4, .swagger-ui .responses-inner h5 {
+  font-size: 16px;
+}
+.swagger-ui code {
+    font-size: 12px;
+}
+/* disable the try it out buttons
+button.btn.try-out__btn {
+    display: none;
+}
+*/
+</style>
