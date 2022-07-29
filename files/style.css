@@ -3,7 +3,6 @@ ODM0MjIyMzMyMDgyOgFW6Hrf0//mXMxCO31+NDXWin5j
 
 curl -H "Authorization: Bearer ODM0MjIyMzMyMDgyOgFW6Hrf0//mXMxCO31+NDXWin5j" https://confluence.netrika.ru/rest/api/content/147168385?expand=body.view
 */
-
 * {
     border: 0px solid silver;
     --bgcolor: #009681;
